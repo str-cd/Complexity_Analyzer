@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-function Dropdown() {
+function Dropdown({ onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState("Language");
 
@@ -9,6 +9,7 @@ function Dropdown() {
   const handleSelect = (language) => {
     setTitle(language);
     setIsOpen(false); // Close dropdown after selection
+    onSelect(language);
   };
 
   return (
@@ -23,16 +24,28 @@ function Dropdown() {
       {isOpen && (
         <div className="absolute mt-2 w-28 bg-white border rounded-md shadow-lg z-10">
           <ul className="py-1 text-gray-700">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleSelect("Java")}>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => handleSelect("Java")}
+            >
               Java
             </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleSelect("C++")}>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => handleSelect("C++")}
+            >
               C++
             </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleSelect("JavaScript")}>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => handleSelect("JavaScript")}
+            >
               JavaScript
             </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleSelect("Python")}>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => handleSelect("Python")}
+            >
               Python
             </li>
           </ul>
