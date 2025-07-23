@@ -2,7 +2,7 @@
 This is a full-stack web application that analyzes the time and space complexity of Java code using AI. Users can input Java code, select the language (currently only Java supported), and get an analyzed complexity report in real time.
 
 🧠 Features
-✅ Accepts Java code as input
+✅ Accepts code as input
 
 ⚙️ Detects Time and Space Complexity
 
@@ -25,7 +25,7 @@ Conditional rendering & error messages
 Backend (Spring Boot)
 REST API endpoint: /api/complexity/getComplexityReport
 
-Accepts Java code and returns complexity analysis in JSON format
+Accepts code and returns complexity analysis in JSON format
 
 📦 Folder Structure
 Copy
