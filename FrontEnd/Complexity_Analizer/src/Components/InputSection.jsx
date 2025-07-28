@@ -35,7 +35,7 @@ const InputSection = () => {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
 
-      fetch("http://localhost:8080/api/complexity/getComplexityReport", {
+      fetch("https://complexity-analyser-backend.onrender.com/api/complexity/getComplexityReport", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
